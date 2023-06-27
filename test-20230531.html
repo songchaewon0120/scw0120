@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="calculate.css" rel = "stylesheet">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <div class = "main_title">
+                <h1>급여 : <input type = "number" id = "salary"/></h1>
+            </div>
+            <div class = "item_list_area">
+                <textarea id = "itemInput" placeholder="ex) 금액 지출내역(입력후 엔터)"></textarea>
+            </div>
+            <div id = "items"></div>
+            <h2>총 지출액 : <span id = "total"></span></h2>
+            <h2>잔여 금액 : <span id = "leftMoney"></span></h2>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src = "https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+    <script src = "calculate.js"></script>
+</html>
+

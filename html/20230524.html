@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1>Filter menu</h1>
+    <nav>
+        <div class="container">
+            <button type="button" class="item">Seoul</button>
+            <button type="button" class="item">New york</button>
+            <button type="button" class="item">Tokyo</button>
+            <button type="button" class="item">Amsterdam</button>
+            <button type="button" class="item">Lonon</button>
+            <button type="button" class="item">Paris</button>
+        </div>
+    </nav>
+    <style>
+        nav{
+            border:1px dashed;
+            width: 24rem;
+            overflow-x: auto;
+            -ms-overflow-style:none ;
+            /*ie, 엣지*/
+            scrollbar-width: none;
+            /*파이어폭스*/
+        }
+        .item{
+            border: none;
+            background-color: #ddd;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 99px;
+            font-size: 1rem;
+        }
+        .container{
+            white-space: nowrap;
+        }
+        /*크롬 사파리 오페라*/
+        nav::-webkit-scrollbar{
+            display: none;
+        }
+
+    </style> -->
+
+    <!-- <h1>Avatar Image</h1>
+<div class="container">
+    <img class="img2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MDNfMjc1%2FMDAxNjU0MjQyNTA0MzE2.TaFspZ6af2SA1XstBJmryx7ciliMNd6PkLbTGn4afDYg.o1lLzAMyBRYfqz-vMOVAiUyEQIF2fkKpll3olCty-84g.JPEG.wogus730%2F%25B5%25CE%25B8%25AE%252C%25BF%25CB%25C0%25CC_%25C6%25EA_%252873%2529.JPG&type=sc960_832" alt="고양이 사진">
+    <div class="item">
+        <h3 class="username">cat</h3>
+        <span class="full-name">냥대표</span>
+    </div>
+</div>
+<div class="container-2">
+    <h1>Card</h1>
+    <img class="img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MDNfMjc1%2FMDAxNjU0MjQyNTA0MzE2.TaFspZ6af2SA1XstBJmryx7ciliMNd6PkLbTGn4afDYg.o1lLzAMyBRYfqz-vMOVAiUyEQIF2fkKpll3olCty-84g.JPEG.wogus730%2F%25B5%25CE%25B8%25AE%252C%25BF%25CB%25C0%25CC_%25C6%25EA_%252873%2529.JPG&type=sc960_832" alt="">
+    <div class="text-wrap">
+    <p class="card-text-1">Kitty</p>
+    <p class="card-text-2">CEO</p>
+    <p class="text-3">dkfj dkfj ei kdsljieol fjkdlsi ejfkl;widf jke </p>
+    <button type="button" class="card-btn" >Send an E-mail</button>
+    </div>
+</div>
+    <style>
+        .text-wrap{
+            padding:0 1rem 1rem;
+        }
+        h1{margin: 0;
+            padding:0;}
+        .card-btn{
+            width: 100%;
+            height: 2rem;
+            border: none;
+            background-color: #ddd;
+        }
+        .card-text-2{
+            color:#888;
+        }
+        .img{
+            width: inherit;
+            object-fit: cover;
+        }
+        .container-2{
+            box-shadow: 1px 1px 10px #888, -1px -1px 10px #888;
+            width: 11rem;
+            height: auto;
+        }
+
+       .container{
+            border:1px dashed;
+            display: inline-flex;
+            align-items: center;
+        }
+        .img2{
+            width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+            border-radius: 4rem;
+        }
+        .item{
+            margin-left: 0.5rem;
+        }
+        .full-name{
+            color:#888;
+            font-size: 0.875rem;
+        }
+        .username{
+            margin: 0;
+        }
+    </style> -->
+
+    <!-- <h1>scalable image</h1>
+
+    <div class="container">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20121002_182%2Fjaeyun0530_1349172250114RNHsR_PNG%2F8.png&type=sc960_832" alt="">
+    </div>
+
+    <style>
+        .container{
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        img{
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            transition: transform 0.2;
+        }
+        .container:hover img{
+            transform: scale(1.1);
+        }
+    </style> -->
+
+    <!-- <h1>overlay on image</h1>
+    <div class="container">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20121002_182%2Fjaeyun0530_1349172250114RNHsR_PNG%2F8.png&type=sc960_832"
+            alt="">
+        <div class="overlay">
+            <p class="text">text</p>
+        </div>
+    </div>
+    <style>
+        .container {
+            position: relative;
+            border: 1px solid #ddd;
+            width: 200px;
+            height: 200px;
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.227);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity:1;
+            opacity: 0;
+
+        }
+
+        text {
+            color: #fff;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style> -->
+
+    <!-- <h1>main iamge</h1>
+    <div class="container bg -image">
+        <h1 class="text-composter">djh dfj dkj ejml sidj ejmkdl dejirkls </h1>
+    </div>
+<style>
+        .container{
+            border:1px dashed;
+            height: 300px;
+        }
+        .text-composter{
+            height: inherit;
+            max-width: 640px;
+            margin:0 auto;
+            padding:0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+           }
+           .bg-image{
+            background-image: linear-gradient(to right ,#0ef ,#03f);
+           }
+    </style> -->
+
+    <!-- <div class="container bg-image">
+        <div class="content">
+            <p class="text-1">Title</p>
+            <p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum laboriosam quibusdam perferendis natus at atque dolorem tempore dolores.</p>
+        </div>
+    </div>
+        
+    <style>
+        p{
+            margin: 0;
+            padding:0;
+        }
+        .text-1{
+            color:aliceblue;
+            font-size: 1.5em;
+        }
+        .text-2{
+            color:aliceblue;
+            font-size: 0.75em;
+        }
+        .content{
+            padding:1rem;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.181);
+            width: 100%;
+            height: 30%;
+        }
+        .container{
+            display: flex;
+            align-items: flex-end;
+            width: 25rem;
+            height: 25rem;
+        }
+        
+        .bg-image{
+            background-size: cover;
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20121002_182%2Fjaeyun0530_1349172250114RNHsR_PNG%2F8.png&type=sc960_832);
+        }
+    </style> -->
+
+
+    <!-- <h1>Thumbnail</h1>
+    <style>
+        .container{
+            border: 1px dashed;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .overlay{
+            background-color: rgba(0 0 0 / 0.5);
+            color:#fff;
+            padding: 0 1rem;
+        }
+        .bg-image{
+            background-size: cover;
+            background-position: center;
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160811_288%2Fkrbg2002_1470899040726Hd2ap_JPEG%2FIMG_20160811_085902.jpg&type=sc960_832);
+        }
+
+    </style>
+    <div class="container bg-image">
+        <div class="overlay">
+            <h1>Title</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat consectetur dolore et veniam, placeat</p>
+        </div>
+    </div> -->
+
+    <!-- <h1>side by side images</h1>
+    그리드 
+    <style>
+        .container{
+            border: 1px dashed;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap:0.5rem;
+        }
+        .item{
+            height: 400px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media(min-width: 640px)
+        {
+            .container{
+                grid-template-columns: repeat(2, minmax(0,1fr));
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMTVfMyAg%2FMDAxNjQ0OTAzMDIyODYy.c2ir2W8xepKpeoj1ESxcqNpIdIIXdGfMubhXeptCSK8g.jMWC0xqgPrDi7hOkIx3wuq2x_C0JbBFQW2p7MbHMNwEg.JPEG.kitten_nyang%2F%25C1%25A6%25B8%25F1_%25BE%25F8%25C0%25BD-37.jpg&type=sc960_832" alt="">
+        </div>
+        <div class="item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150823_2%2Fcodn9_1440323782571ilk9X_JPEG%2F%25BF%25F8_%252829%2529.jpg&type=sc960_832" alt="">
+        </div>
+    </div> -->
+
+    <!-- <h1>search form</h1>
+<form action="">
+    <input type="search" placeholder="Search Google" name="q" autocomplete="off">
+    <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </path>
+    </button>
+</form>
+
+<style>
+    form{
+        width: 20rem;
+        margin:auto;
+        position: relative;
+
+    }
+    input{
+        width: inherit;
+        border:1px solid #ddd;
+        padding:0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 99px;
+        outline: none;
+    }
+    button{
+        position: absolute;
+        top: 0rem;
+        right:0rem;
+        height: 100%;
+        padding:0 1rem;
+        border: none;
+        /* background-color: initial; */
+        background-color: transparent;
+        /*투명하게 만드는거*/
+    }
+    svg{
+        width: 1rem;
+        fill:#888;
+        /*색 채울때는 fill사용*/
+    }
+</style> -->
+
+    <!-- <form action="" autocomplete="off">
+        <div class="wrap">
+            <h1>Login</h1>
+            <div class="box">
+                <label class="username" for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="box">
+                <label for="password" class="password">Password</label>
+            </div>
+            <input type="password" id="password">
+            <button>Login</button>
+            <div class="buttom-a">
+                <a href="#">
+                    <span>Sign Up</span></a>
+                <a href="#">
+                    <span>Forgot Password?</span></a>
+            </div>
+        </div>
+    </form>
+    <style>
+        .wrap {
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            width: 20rem;
+            /* margin: 100px auto 0; */
+            margin: 0 auto;
+            margin-top: 10rem;
+        }
+
+        .box {
+            margin-top: 0.2rem;
+        }
+
+        .buttom-a {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 0.3rem;
+        }
+
+        input {
+            width: 100%;
+            /* height: 1.5rem; */
+            padding: 0.5rem;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            height: 2.5rem;
+            border: none;
+            background-color: black;
+            color: #fff;
+            padding: 0;
+            margin-top: 0.9rem;
+            margin-bottom: 0.9rem;
+        }
+    </style> -->
+
+
+    <!-- <h1>grid columns start, end</h1>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .item {
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+
+    .grid-cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .col-start-1 {
+      grid-column-start: 1;
+    }
+
+    .col-start-2 {
+      grid-column-start: 2;
+    }
+
+    .col-start-5 {
+      grid-column-start: 5;
+    }
+
+    .col-end-3 {
+      grid-column-end: 3;
+    }
+    
+    .col-end-6 {
+      grid-column-end: 6;
+    }
+
+    .col-end-7 {
+      grid-column-end: 7;
+    }
+    .col-end-11 {
+      grid-column-end: 11;
+    }
+
+    .red{
+        background-color: red;
+    }
+  
+    .test{background-color: black;}
+  </style>
+
+  <div class="container grid gap-2 grid-cols-6">
+    <div class="item col-start-2 col-end-6">item 1</div>
+    <div class="item col-start-1 col-end-3">item 2</div>
+    <div class="item col-start-5 col-end-7">item 3</div>
+    <div class="item col-start-1 col-end-7">item 4</div>
+  </div>
+
+<div class="container grid gap-2 grid-cols-6">
+    <div class="test col-start-2 col-end-6">0</div>
+</div> -->
+
+<h1>media rule</h1>
+  <p>
+    디바이스에 따라 다르게 레이아웃을 적용할 수 있다
+  </p>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    /* default column count */
+    .grid-cols-n {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    @media (min-width: 640px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+  </style>
+
+  <h3>Breakpoint</h3>
+
+  <ul>
+    <li>Mobile Device(default): ~ 640px</li>
+    <li>Small Device: 641px ~ 767px</li>
+    <li>Medium Device: 768px ~ 1023px</li>
+    <li>Large Device: 1024px ~ 1279px</li>
+    <li>Extra Large Device: 1280px ~ 1535px</li>
+    <li>2 Extra Large Device: 1536px ~ </li>
+  </ul>
+
+  <div class="container grid gap-2 grid-cols-n">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <style>
+        .a{
+            outline: 3px solid rgb(167, 128, 51);
+        }
+        #main {}
+
+        .container {}
+
+        #mainImg {
+            object-fit: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .imgStyle {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+    <h1>Gallery</h1>
+    <div id="main">
+        <img id="mainImg"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEwMTZfMTQx%2FMDAxNTcxMTk3MjU1MTUy.AeWgGGkuiQ9ULK1liVanqFCdTsvWfQstL7xTXyZ2d5Eg.quFjT1Lqr_YEzFSNceJ61f8O8vBiOCP4Q02OqPf8amgg.JPEG.happy983018%2FDhq4wtQV4AEoYs1.jpg&type=sc960_832"
+            alt="">
+    </div>
+    <h3>Thumbnails</h3>
+    <div class="container">
+        <img class="imgStyle"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEwMTZfMTQx%2FMDAxNTcxMTk3MjU1MTUy.AeWgGGkuiQ9ULK1liVanqFCdTsvWfQstL7xTXyZ2d5Eg.quFjT1Lqr_YEzFSNceJ61f8O8vBiOCP4Q02OqPf8amgg.JPEG.happy983018%2FDhq4wtQV4AEoYs1.jpg&type=sc960_832"
+            alt="" onclick="jumpTo(0)">
+        <img class="imgStyle"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MDFfMTQg%2FMDAxNjYxOTY5Nzg4Njg2.HmwAZo1zJJrW3RqDgIB0KAHJuo7cZkgWfQNHRXWaUZwg.RHPULx5G5Q79l5vQ-eiB3OVufIrF63hv_NlgBNGXVoUg.JPEG.sensational-%2F60F09B0A-6224-47CB-9816-BAF1CE7200EE.jpeg&type=sc960_832"
+            alt="" onclick="jumpTo(1)">
+        <img class="imgStyle"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA0MjFfMjM1%2FMDAxNTI0MjkyMDUyMjcy.Sp4wF4GZdi788SFfWMH2XSglVh0HcDIGUFh0DgozVycg.01acsXe5Kk-G596QW71jyov4920yJNbJCOO5sJgHJ7Qg.JPEG.watergus99%2FIMG_6939.jpg&type=sc960_832"
+            alt="" onclick="jumpTo(2)">
+    </div>
+    <script>
+        var main = document.getElementById("mainImg");
+        var previousIndex = 0;
+        var thumbnail = document.getElementsByClassName("imgStyle");
+
+        function jumpTo(thisIndex){
+            main.src = thumbnail[thisIndex].src;
+            console.log(main);
+            console.log("이전 인덱스 값:",previousIndex);
+            console.log("현재 인덱스 값:",thisIndex);
+            // console.log(main.src);
+            if(thisIndex === previousIndex){
+                return;
+            }
+            thumbnail[thisIndex].classList.add("a");
+            thumbnail[previousIndex].classList.remove("a");
+            
+            previousIndex = thisIndex;
+        }
+
+
+    </script> -->
+
+    <style>
+        .modal-img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #modal {
+            display: block;
+            margin: 100px auto 0;
+        }
+
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.372);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <h1>modal</h1>
+
+    <img class="modal-img"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160607_217%2Fangle5771_1465278846012D5o1f_JPEG%2F2ew3.jpg&type=a340"
+        alt="">
+    <img class="modal-img"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA3MzBfMjY2%2FMDAxNTY0NDY5NDE5Njk2.WKqSNT5ljOG8twUUhmImeIy2WazCxYnQKDBHwrttFRAg.BDGuC3nZxObEaK8Oz-kffLmbbtOXDx1EW6oBxD3qdgMg.JPEG.ssledkb%2Foutput_2483290522.jpg&type=a340"
+        alt="">
+    <img class="modal-img"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20130222_136%2Fna102503_1361492748845tFLY7_JPEG%2F%25B5%25B5%25B6%25F3%25BF%25A1%25B8%25F95.jpg&type=a340"
+        alt="">
+
+    <div id="overlay" class="hidden">
+        <img class="modal-img" id="modal" src="" alt="">
+    </div>
+
+    <script>
+        var overlay = document.getElementById("overlay");
+        var modal = document.getElementById("modal");
+        var thumbnail = document.getElementsByClassName("modal-img");
+
+        thumbnail.addEventListener("click".function(e){
+                        
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

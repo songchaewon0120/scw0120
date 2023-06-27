@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메롱</title>
+</head>
+
+<body>
+    <!-- ctrl + / 주석처리 했다가 지웠다가 할수있음-->
+    <!-- <h1>hello html</h1> -->
+
+    <!-- <pre>
+        HTML 튜토리얼
+
+        1 기초
+        - HTML의 구조
+
+        2 문자 처리
+        - h1 - h 6
+        - p 
+        - a
+        - span
+        - br
+
+        3 레이아웃
+        - header
+        - nav
+        - main
+        - section
+        - ul, ol
+        - table
+        - div
+        - footer
+
+        4 폼
+        - form
+
+        5 이미지
+        - img
+
+        6 그래픽
+        - svg
+
+        7 기타
+        - HTML Entity
+        - 시멘틱 태그와 넌시맨틱 태그
+    </pre> -->
+
+    <!-- <h1>HTML의 구조</h1>
+
+    <pre>
+        1 엘리먼트
+        HTML 문서를 만들기 위한 각각의 요소
+        (태그같은거)
+
+        2 트리구조
+        부모와 자식, 형제 관계 등을 갖는 데이터 구조
+        (article의 자식은 h3이 되고
+        li의 부모는 ul
+        li의 자식은 a
+        a의 조상은 ul
+        ul의 자손은 a
+        li의 형제는 li
+        h3와 ul은 형제가 된다)
+
+        3 attribute
+        엘리먼트 기능을 확장시킨다
+        (글씨가 하늘색인거 생각하면 됨)
+    </pre>
+
+        <article>
+            <h3>맥주</h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.guinness.com" target="_blank">
+                        target="_blank" a를 눌렀을때 새 탭으로 이동해라
+                        기네스</a>
+                </li>
+                <li>하이네켄</li>
+                <li>버드와이저</li>
+            </ul>
+        </article> -->
+
+
+    <!-- <h1>h1 - h6</h1>
+        <p>heading (제목)</p>
+
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5> -->
+
+    <!-- <h1>p</h1>
+        <p>paragraph(문장)</p>
+
+        <h3>Title</h3>
+        <p>Lorem: ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quasi, ex, accusamus quos eius natus a nam nisi dolores molestiae ad dolorem, omnis cum labore placeat magni ratione. Asperiores, omnis.
+            lorem(영어 텍스트 샘플)</p>
+             -->
+
+    <!-- <h1>a</h1>
+        <p>anchor (링크)</p>
+        <a href="#">Google</a>
+        <p>(하이퍼링크같은거)</p>
+         -->
+
+    <!-- <h1>span</h1>
+        <p>문장에서 특정 부분을 선택 할 때 주로 사용한다.</p>
+        <p><span style="font-weight: bold">Lorem ipsum dolor sit amet,</span> consectetur adipisicing elit. Consectetur exercitationem dicta ab quia praesentium illo blanditiis neque, maxime officia dolor voluptatem. Quo, blanditiis commodi deserunt cupiditate rerum a aut temporibus!
+        </p> -->
+
+    <!-- <h1>br</h1>
+        <p>breaking rule (줄바꿈)</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Amet illo illum architecto expedita at natus est distinctio saepe ad cum,<br>
+            ab quisquam delectus molestias enim sunt sed sequi,<br>
+            cumque iure.
+        </p> -->
+
+
+    <!-- 레이아웃
+        <h1>header</h1>
+        <p>
+            웹피이지의 최상단 부분
+            보통 로고나 슬로건, 메뉴 등이 있다.
+        </p>
+
+        ex) header 구조
+        <header>
+            <h1>LOGO</h1>
+            <p>Welcome to company</p>
+        </header> -->
+
+    <!-- <h1>nav</h1>
+        <p>navigation (메뉴)</p>
+
+        ex) nav 구조
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="#">about</a>
+                </li>
+                <li>
+                    <a href="#">blog</a>
+                </li>
+            </ul>
+        </nav> -->
+
+    <!-- <h1>main</h1>
+        <p>웹페이지의 메인 컨텐츠 부분</p>
+
+        ex) main 구조
+
+        <main>
+            <h1>main contents</h1>
+        
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero hic eligendi! Asperiores recusandae ea explicabo et hic, aliquid esse! Quidem provident id nesciunt excepturi, asperiores quas accusantium unde magnam.
+            </p>
+        
+            <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+            </ul>
+        </main>
+        (header와 footer 전까지 부분이 main태그라고 보면 된다.) -->
+
+    <!-- <h1>section</h1>
+        <p>메인 내에서의 구역, 섹션</p>
+
+        <main>
+            <section>
+                <h2>section 1</h2>
+                <h1>main contents</h1>
+        
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero hic eligendi! Asperiores
+                    recusandae ea explicabo et hic, aliquid esse! Quidem provident id nesciunt excepturi, asperiores quas
+                    accusantium unde magnam.
+                </p>
+            </section>
+            <section>
+                <h2>section 2</h2>
+        
+                <ul>
+                    <li>list item</li>
+                    <li>list item</li>
+                    <li>list item</li>
+                </ul>
+        </main>
+        </section> -->
+
+    <!-- <h1>ul, ol</h1>
+        <p>ul (unordered list), ol (ordered list)</p>
+        
+        <h3>unordered list</h3>
+        <ul>
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+        </ul>
+        
+        <h3>ordered list</h3>
+        <ol>
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+        </ol>
+    
+    ul은 점으로 나타나고, ol은 숫자로 나타낸다.-->
+
+    <!-- <h1>table</h1>
+    <p>테이블, 표</p>
+
+    <pre>
+            thead: table head
+            tbody: table body
+            tr: table row (행)
+            th: table heading (열 제목)
+            td: table data (셀)
+        </pre>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>origin</th>
+                <th>available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>guinness</td>
+                <td>ireland</td>
+                <td>no</td>
+            </tr>
+            <tr>
+                <td>heineken</td>
+                <td>netherlands</td>
+                <td>yes</td>
+            </tr>
+            <tr>
+                <td>budwiser</td>
+                <td>usa</td>
+                <td>yes</td>
+            </tr>
+            <tr>
+                <td>asahi</td>
+                <td>japan</td>
+                <td>yes</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+
+
+
+    <!-- <h1>div</h1>
+    <p>divide (구역)</p>
+    <main>
+        <div>
+            <h2>title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero hic eligendi! Asperiores
+                recusandae ea explicabo et hic, aliquid esse! Quidem provident id nesciunt excepturi, asperiores quas
+                accusantium unde magnam.
+            </p>
+        </div>
+
+        <div>
+            <h2>title 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero hic eligendi! Asperiores
+                recusandae ea explicabo et hic, aliquid esse! Quidem provident id nesciunt excepturi, asperiores quas
+                accusantium unde magnam.
+            </p>
+        </div>
+    </main> -->
+
+
+    <!-- <h1>footer</h1>
+    <p>웹페이지의 최하단 부분</p>
+    <p>보통 저작권, 개인정보 처리방침, 이용약관, 참고 링크 등이 있다.</p>
+
+    <footer>
+        <small>2023 &copy; company</small>
+        small: 비교적 작은 글씨크기 태그
+    <p>
+        <a href="#">privacy & terms</a>
+    </p>
+    
+    <div>
+        <a href="#">facebook</a>
+        <a href="#">youtube</a>
+        <a href="#">instargram</a>
+    </div>
+    </footer> -->
+
+    <!-- <h1>form</h1>
+    <pre>
+        클라이언트 데이터를 서버에 전송한다
+        attribute 종류
+            1 for  (로그인, 회원가입, 게시물 작성할때 보임)
+            action: 데이트를 전송할 주소
+
+            2 input
+            type: 수집하고자 하는 데이터에 따라 다양한 타입이 존재한다.
+            name: 서버가 폼의 데이터를 분류하는 기준
+            placeholder: 입력할 데이터 예시
+    </pre>
+
+    <form action="/search.php">
+        <h1>Googole</h1>
+        <input type="search" name="q" id="" placeholder="search Google">
+        <button>search</button>
+    </form> -->
+
+
+    <!-- <form action="/login.php" method="post">
+        <h1>Login</h1>
+
+        label 의 form와 input의 id를 일치시키면 연결됨
+        label 의 form를 읽어주기도 함
+        <div>
+            <label for="username">username</label>
+            <input type="text" name="username" id="username">
+        </div>
+
+        type password는 입력한 텍스트가 점으로 표시됨
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+            <input type="checkbox" name="show" id="show">
+            <label for="show">show password</label>
+        </div>
+
+        submit은 작성하지 않고 생략가능
+        버튼을 누르면 form이 제출
+        <button type="submit">Login</button>
+    </form> -->
+
+    <!-- <h1>IMG</h1>
+    <p>이미지</p>
+    <p>src: source (이미지 주소)</p>
+    <p>alt: alterntive (대체 텍스트)</p>
+    <p>width: 이미지의 넓이</p>
+
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MTNfMTgy%2FMDAxNjI2MTgyMDAzMjMy.cyI0McKRmQR41nRMgJoZpqQGwu5TEFZSWLUCcCe2rZIg.Ib0HFkr-3Zn4LhB3F3WeWDeRb4B1B8fCCP7fRPALUcsg.JPEG.leehe924%2Foutput_806345999.jpg&type=a340" alt="사장님 아무거나 먹지마세요"
+    width="400"> -->
+
+
+    <!-- <h1>svg (scalable vecrot graphic)</h1>
+    <p>수학적인 방법으로 이미지를 표현한다.</p>
+    <p>확대해도 이미지가 깨지지 않는다</p>
+
+
+    <svg height="150" width="200">
+        <ellipse cx="100" cy="75" rx="90" ry="60" fill="#333" />
+        /로 꼭 닫아줘야한다
+        ellipse (타원형) svg로 도형을 만들어봄
+        <text fill="#fff" font-size="45" font-family="verdana" x="35" y="90">LOGO</text>
+    </svg> -->
+
+<!-- 
+ <h1>HTML Entity</h1>20230519
+<pre>
+    1 html에서 예약된 문자를 표현해야 할 때 사용한다
+    2 키보드로 입력하기 어려운 문자를 입력할 때 사용한다 예) 특수문자 등등
+
+
+    li: less than, gt: greater than, amp: ampersand, quot: quotation, copy: copyright
+</pre>
+
+<h3>Entity name</h3>
+
+<ul>
+    <li>&lt; &gt;</li>
+    <li>&amp;</li>
+    <li>&quot;</li>
+    <li>&copy;</li>
+</ul>
+
+
+<h3>Entity number</h3>
+
+<ul>
+    <li>&#60; &#62;</li>
+    <li>&#38;</li>
+    <li>&#34;</li>
+    <li>&#169;</li>
+</ul> -->
+
+<console class="log"></console>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

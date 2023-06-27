@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>파일 같은거 업로드 할 때</h1>
+    <h3>Drag and Drop</h3>
+    <div id="drop-zone">
+        <p><i>여기</i>에 파일을 드래그 앤 드롭 하세요</p>
+    </div>
+
+    <script>
+        var dropZone = document.getElementById("drop-zone");
+    
+        // dragover: 드래그 중
+        dropZone.addEventListener("dragover", dragOverHandler);
+        // drop: 드랍 했을 때
+        dropZone.addEventListener("drop", dropHandler);
+    
+        function dragOverHandler(e) {
+            e.preventDefault(); // 브라우저가 파일을 열지 않음
+            console.log("드래그 중");
+        }
+    
+        function dropHandler(e) {
+            e.preventDefault(); // 브라우저가 파일을 열지 않음
+            console.log("드랍되었습니다");
+
+            //유저가 드랍한 파일리스트
+            var files = Array.from(e.dataTransfer.files);
+
+            console.log(files);
+
+            //AJAX요청
+            //...
+
+            alert("제출되었습니다.")//알림 창
+        }
+    </script>
+</body>
+</html>

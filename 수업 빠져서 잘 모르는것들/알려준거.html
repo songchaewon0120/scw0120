@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 함수 선언식 (너가 아는 함수 만드는법임)
+// function sayHellong(){
+    // 기능
+// }
+// 
+// 실행법 : sayHellong();
+// 
+// 함수 표현식
+// let sayHellong = function(){
+    //  기능
+// }
+// 
+// 실행법 : sayHellong();
+// 
+// 특징 : 둘다 같음.근데 함수 선언식은 호이스팅이 됨.(호이스팅은 구글링 ㄱㄱ)
+// 
+// 
+// 근데 이제 '=>'이게 있는데 얘를 화살표함수라함. 얘는 함수 표현식에 사용됨. 함수 선언식은 못사용함.
+// 
+let sayHellong1 = () => {   // 보면 그냥 function 이라는 키워드가 사라지고 '=>' 이게 붙은거임 한마디로 걍 단축어임.
+
+}
+// 
+// 만약 매개변수를 받고 싶어. 그럼
+let sayHellong2 = (인사말문자열) => {   // 괄호안에 변수명을 적어주면됨.
+     //그럼 여기서 '인사말문자열'를 쓸수있음.
+     console.log(인사말문자열);
+}
+// 
+sayHellong2("김채원하이");
+
+// 만약 매개변수가 한개면 괄호를 생략해도 돼
+let sayHellong3 = 인사말문자열 => {
+     console.log(인사말문자열);
+}
+
+sayHellong3("김채원하이");
+// 
+// 
+// 응용
+// 
+let id = document.getElementById("ID");
+
+id.addEventListener('click',()=>{ 
+
+});// addEventListener 라는 함수 두번째 매개변수는 또다른 함수를 받는 자리인거임 ㅇㅋ?
+
+
+</script>
+</body>
+</html>

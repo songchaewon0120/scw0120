@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .el {
+          opacity: 0;
+          transition: 0.5s;
+        }
+    
+        .opacity-100 {
+          opacity: 1;
+        }
+      </style>
+</head>
+<body>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea nisi debitis, ipsa id qui obcaecati neque, doloremque iste maxime reiciendis deleniti enim cumque quidem eius quia deserunt. Nobis, amet!</h1>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea nisi debitis, ipsa id qui obcaecati neque, doloremque iste maxime reiciendis deleniti enim cumque quidem eius quia deserunt. Nobis, amet!</h1>
+      <h1 class="el">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea nisi debitis, ipsa id qui obcaecati neque, doloremque iste maxime reiciendis deleniti enim cumque quidem eius quia deserunt. Nobis, amet!</h1>
+      <h1 class="el">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea nisi debitis, ipsa id qui obcaecati neque, doloremque iste maxime reiciendis deleniti enim cumque quidem eius quia deserunt. Nobis, amet!</h1>
+      <h1 class="el">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea nisi debitis, ipsa id qui obcaecati neque, doloremque iste maxime reiciendis deleniti enim cumque quidem eius quia deserunt. Nobis, amet!</h1>
+    
+      <script>
+        var els = document.getElementsByClassName("el");
+    
+        window.addEventListener("scroll", function () {
+    
+          // 뷰포트의 높이
+          var viewPortHeight = window.innerHeight;
+    
+          for (var i=0; i<els.length; i++) {
+    
+            // 뷰포트 탑과 엘리먼트 탑사이의 거리
+            var y = els[i].getBoundingClientRect().y;
+      
+            console.log(y);
+      
+            if (y < viewPortHeight - 100) { // 뷰포트에 충분히 진입했을 때 
+              els[i].classList.add("opacity-100");
+            }
+          }
+        })
+      </script>
+</body>
+</html>

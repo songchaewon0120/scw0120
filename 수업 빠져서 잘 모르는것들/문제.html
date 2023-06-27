@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230608</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-gradient-to-r bg-gray-500 py-4">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold text-white">Welcome to My Website</h1>
+        </div>
+    </header>
+
+    <main class="py-8">
+        <section class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-600 mb-4" >About Us</h2>
+            <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex non nam ullam, magni
+                excepturi voluptates quidem eaque voluptatem suscipit ea possimus laudantium ab a assumenda dicta
+                exercitationem veniam in voluptas!</p>
+        </section>
+
+        <section class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-600 mb-4 mt-8">Contact Us</h2>
+
+            <form>
+                <label for="name" class="block text-gray-700 mb-2">Name:</label>
+                <input type="text" id="name" name="name" required class="border border-gray-600 px-4 py-2 mb-4">
+
+                <label for="email" class="block text-gray-700 mb-2">Email:</label>
+                <input type="email" id="email" name="email" required class="border border-gray-600 px-4 py-2 mb-4">
+
+                <label for="message" class="block text-gray-700 mb-2">Message:</label>
+                <input id="text" name="message" class="border border-gray-600 px-4 py-2 mb-4"></input>
+
+                <button type="submit" class="bg-gray-600 text-white font-bold py-2 px-4 hover:bg-gray-700">Send
+                    Message</button>
+            </form>
+
+            <input type="radio" class="hidden" id="team"></input>
+            <label for="team" class="bg-gray-600 text-white font-bold py-2 px-4 hover:bg-gray-700 cursor-pointer">Team
+                Members</label>
+        </section>
+    </main>
+
+    <!-- Team Members -->
+    <main id="teamMembers" class="hidden checked/team:block">
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <img class="w-full" src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                <div class="px-4 bg-gray-200">
+                    <p class="text-xl tracking-widest font-bold">김수진</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam in nisi neque
+                        saepe quibusdam
+                        deserunt dicta repellat, inventore ducimus laudantium eum optio magnam reprehenderit dolor rem
+                        corporis, nesciunt odit.</p>
+                </div>
+            </div>
+            <div>
+                <img class="w-full" src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+                <div class="px-4 bg-gray-200">
+                    <p class="text-xl tracking-widest font-bold">김철수</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam in nisi neque
+                        saepe quibusdam
+                        deserunt dicta repellat, inventore ducimus laudantium eum optio magnam reprehenderit dolor rem
+                        corporis, nesciunt odit.</p>
+                </div>
+            </div>
+            <div>
+                <img class="w-full" src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                <div class="px-4 bg-gray-200">
+                    <p class="text-xl tracking-widest font-bold">안미정</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam in nisi neque
+                        saepe quibusdam
+                        deserunt dicta repellat, inventore ducimus laudantium eum optio magnam reprehenderit dolor rem
+                        corporis, nesciunt odit.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-500 py-10"></footer>
+
+    <script>
+        team.addEventListener('click', () => {
+            if (teamMembers.classList.contains('hidden')) {
+                teamMembers.classList.remove('hidden');
+            } else {
+                teamMembers.classList.add('hidden');
+            }
+        });
+
+    </script>
+</body>

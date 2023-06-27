@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+          width: 20rem;
+        }
+    
+        .form-group {
+          margin-bottom: 1rem;
+        }
+    
+        label {
+          display: block;
+        }
+    
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+        }
+    
+        button[type=submit] {
+          padding: 0.5rem 0.75rem;
+          border: none;
+          background-color: #333;
+          color: #fff;
+        }
+    
+        .error-message {
+          color: #f00;
+          margin: 0;
+        }
+    
+        .hidden {
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    
+      <h1>Contact Form</h1>
+    
+      <form action="" id="form">
+        <div class="form-group">
+          <label for="">First name</label>
+          <input type="text" name="fname" placeholder="John">
+          <p id="fname-error" class="error-message hidden"></p>
+        </div>
+        <div class="form-group">
+          <label for="">Last Name</label>
+          <input type="text" name="lname" placeholder="Doe">
+          <p id="lname-error" class="error-message hidden"></p>
+        </div>
+        <div class="form-group">
+          <label for="">E-mail</label>
+          <input type="text" name="email" id="" placeholder="JohnDoe@example.com">
+          <p id="email-error" class="error-message hidden"></p>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    
+      <script>
+        var form = document.getElementById('form');
+        // error message
+        var fnameError = document.getElementById('fname-error');
+        var lnameError = document.getElementById('lname-error');
+        var emailError = document.getElementById('email-error');
+    
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+    
+          // FormData: 폼데이터에 접근할 수 있다
+          var formData = new FormData(e.target);
+    
+          var fname = formData.get('fname');
+          var lname = formData.get('lname');
+          var email = formData.get('email');
+    
+          console.log(fname, lname, email);
+    
+          // 이름 유효성 검사
+          if (!fname) { // 이름을 입력하지 않은 경우
+            errorHandler("이름은 필수입니다", fnameError);
+          } else if (fname.match(/[^a-zA-Z]/)) { // 유효한 이름이 아닌 경우 (숫자가 없어야함)
+            errorHandler("유효한 이름을 입력하세요", fnameError);
+          } else { // 통과
+            errorHandler(null, fnameError);//숫자가 들어가면 match에 걸려서 숫자가 반환됨
+            //null이 통과인 이유는 match에서 알파벳이 아닌걸 찾는건데 다 알파벳이면 null이 반환됨(걸리는게없으니까)
+          }
+    
+          // 성 유효성 검사
+          if (!lname) {//비어있으면 성은 필수입니다
+            errorHandler("성은 필수입니다", lnameError);
+          }else if(lname.match(/[^a-zA-Z]/)){
+            errorHandler("이름을 확인하세요", lnameError);
+          } else {
+            errorHandler(null, lnameError);
+          }
+    
+          // 이메일 유효성 검사
+          if (!email) {//비어있으면 이메일은 필수입니다
+            errorHandler("이메일은 필수입니다", emailError);
+          } else if(!email.includes('@') && !email.includes('.')){
+            errorHandler("이메일 형식을 확인해주세요",emailError);
+          } else {
+            errorHandler(null, emailError);
+          }
+    
+          // 에러 처리 함수
+          function errorHandler(error, container) {
+            if (error) {
+              container.classList.remove("hidden");
+              container.textContent = error;
+            } else {
+              container.classList.add("hidden");
+            }
+          }
+    
+        })
+      </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+          display: block;
+        }
+    
+        input {
+          width: 16rem;
+          padding: 0.5rem;
+          border: 1px solid #ddd;
+        }
+    
+        .success {
+          color: #0bf;
+        }
+    
+        .error {
+          color: #f00;
+        }
+      </style>
+</head>
+<body>
+        <div class="container">
+        <label for="">Username</label>
+        <input type="text" id="input">
+        <p id="message">Enter username.</p>
+      </div>
+    
+      <script>
+        var input = document.getElementById("input");
+        var message = document.getElementById("message");
+    
+        // keyup: 키보드에서 손을 뗄 때
+        input.addEventListener("keyup", function (e) {
+          try { // 여기서 코드를 작성한다
+            // e.target: input
+            var username = e.target.value;
+    
+            console.log(username);
+    
+            // 유효한 유저이름이 아닐 때
+            // String.match(인자): 문자열에서 인자를 포함한 문자를 검색한다
+            // 정규식 (/패턴/): 문자열 검색을 위한 패턴을 제공한다
+            if (username.match(/[^a-z0-9_]/)) {
+              throw "영어 소문자와 숫자, 언더스코어만 사용 가능합니다";
+            }
+    
+            console.log("사용가능한 유저이름입니다")
+            if (!username) {
+              throw "유저이름은 필수입니다"
+            }
+    
+            if (username.length < 5) {
+              throw "유저이름이 너무 짧습니다" // 커스텀 에러
+            }
+    
+    
+            message.innerHTML = `<span class="success">사용 가능합니다</span>`
+    
+          } catch (error) {
+            console.error(error)
+    
+            message.innerHTML = `<span class="error">${error}</span>`
+          }
+        })
+      </script>
+</body>
+</html>

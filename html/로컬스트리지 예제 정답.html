@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #promotion{
+            background-color: #eee;
+            padding:1rem;
+        }
+        #close-btn{
+            float: right;
+            cursor: pointer;
+            color:black;
+            width: 20px;
+            height: 20px;
+        }
+        .hidden{
+            display: none;
+        }
+        #block-btn{
+            padding:0.5rem 0.75rem;
+            border:none;
+            color:#fff;
+            background-color: #333;
+        }
+    </style>
+
+    <div id="promotion">
+        <span id="close-btn">&times;</span>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p>
+        <button id="block-btn">Do not show antmore</button>
+    </div>
+
+    <script>
+        var closeBtn = document.getElementById('close-btn');
+        var blockBtn =  document.getElementById('block-btn');
+        var promotion = document.getElementById('promotion');
+
+        //페이지가 로드되었을 때
+        if(localStorage.getItem("blockedAt")){
+            promotion.classList.add("hidden");
+        }
+
+        //닫기 버튼을 클릭했을때
+        closeBtn.addEventListener("click",function(){
+            promotion.classList.add("hidden");
+        })
+
+        //블락버튼을 클릭했을때
+        blockBtn.addEventListener("click",function(){
+            promotion.classList.add("hidden");
+            
+            //로컬스트리이제 블락정보를 저장한다
+            localStorage.setItem("blockedAt", new Date().toLocaleDateString());
+        })
+    </script>
+</body>
+</html>

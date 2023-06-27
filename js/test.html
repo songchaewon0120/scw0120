@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id"><input id="password1" value="123" type="text" placeholder="PASSWORD입력"></div>
+    <div id="id"><input id="password2" value="123" type="text" placeholder="PASSWORD입력 확인"></div>
+    <button id="btn">확인</button>
+
+
+<script>
+    var password1 = document.getElementById("password1").value;
+    var password2 = document.getElementById("password2").value;
+    var btn = document.getElementById("btn")
+
+    btn.addEventListener("click",function(){
+        if(password1 === password2){
+            console.log("비밀번호가 일치합니다.")
+        }else{
+        //     try{
+        //         password1 == password2;
+        //         throw "비밀번호가 일치합니다."
+        //     }
+        //     if(password1 !== password2){
+        //         throw "비밀번호가 일치하지 않습니다."
+        //     }
+        //     console.log("비밀번호가 일치합니다.")
+        //     catch (error){
+        //         console.log(error)
+        //     }
+        //     // console.log("비밀번호가 일치하지 않습니다. 비밀번호를 확인하세요.")
+        // }
+        // })
+
+        // try{
+        //     password1 === password2;
+        //     console.log("비밀번호가 일치합니다.");
+
+        //     if(password1 != password2){
+        //         throw "비밀번호가 일치하지 않습니다."
+        //     }
+        // catch (error){
+        //     console.error(error)}
+
+
+    // try {
+    //   var age = 15;
+    
+    //   console.log("학생:", "아저씨 기네스 한병 주세요");
+    
+    //   if (age < 18) {
+    //     // 커스텀 에러를 던진다
+    //     throw "미성년자는 술을 살 수 없습니다"
+    //   }
+    
+    //   // 아래 코드는 실행되지 않는다
+    //   console.log("직원:", "네 여기있습니다");
+    
+    // } catch (error) {
+    //   console.error(error)
+    // }
+    </script>
+</body>
+</html>

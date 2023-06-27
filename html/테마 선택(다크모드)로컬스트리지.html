@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 페이지를 새로고침하거나 나갔다가 들어와도 유지됨 -->
+    <style>
+        .dark-mode {
+            background-color: #222222dd;
+            color: #fff;
+        }
+    </style>
+
+    <h1>다크모드</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolore praesentium voluptatibus ad, quos quia.
+        Qui officia corporis maxime quam repellat dignissimos provident, harum molestias. Similique nulla repellendus
+        velit quidem.</p>
+    <input type="checkbox" id="checkbox" name="">
+    <label for="checkbox">
+        Dark Mode
+    </label>
+
+    <script>
+        var checkbox = document.getElementById("checkbox");
+
+        // 페이지가 로드되었을 때
+        // localStorage.getItem(key): 로컬 스토리지에서 데이터를 가져온다
+        var isDarkMode = localStorage.getItem("darken");
+
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
+            checkbox.checked = true;
+        }
+
+        // change: checkbox의 경우 체크 상태가 바뀌는 것
+        checkbox.addEventListener("change", function (e) {
+            // e.target: checkbox
+            var checked = e.target.checked;
+
+            console.log(checked);
+
+            if (checked) {
+                document.body.classList.add('dark-mode');
+
+                // localStorage.setItem(key, value)
+                // 로컬 스토리지에 데이터를 저장한다
+                localStorage.setItem("darken", new Date().toLocaleString()); 
+                // toLocaleString: 현재 시간을 저장하는 내장메서드
+            } else {
+                document.body.classList.remove('dark-mode');
+                // 여기까지는 check해서 다크모드가 실행되지만 새로고침 후 유지가 안됨
+                // 로컬 스토리지는 계속 유지, 세션 스토리지는 탭을 지우면 새로고침됨
+
+                // localStorage.removeItem(key)
+                // 로컬 스토리지에서 데이터를 삭제한다
+                localStorage.removeItem("darken");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

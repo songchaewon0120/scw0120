@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <!-- css 튜토리얼
+
+        1 선택자
+        엘리먼트 선택자
+        클래스 선택자
+        id 선택자
+        자식 선택자
+        pseudo Class
+
+        2 규칙
+        단위
+        색상 표기법
+
+        3 타이포그래피
+        font font-size
+        font style
+        font weight
+        text align
+        letter spacing
+        line height
+
+        4 엘리먼트 스타일
+        display
+        color, background color
+        border
+        padding
+        margin
+        width
+        min width
+        max width
+        height
+        min height
+        max height
+        box sizing
+        overflow
+        white space
+        position
+        transform
+
+        5 이미지
+        img
+        background image
+
+        6 레이아웃
+        flex
+        grid
+
+        7 반응형 
+        media rule -->
+
+
+        <!-- <h1>엘리먼트 선택자</h1>
+        <ul>
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+        </ul>
+        <style>
+            /*엘리먼트 이름으로 선택한다.*/
+            ul{
+                /*두께가 1px이고 실선의 스타일의 경계선*/
+                border:1px solid;
+            }
+        </style>
+
+        <h1>클래스 선택자</h1>
+        띄어쓰기로 구분을 할수있으며, 여러개의 class를 사용할수있다.
+        <style>
+            /*밑줄*/
+            .underline{
+                text-decoration: underline;
+            }
+            /*이탤릭체(기울임)*/
+            .italic{
+                font-style: italic;
+            }
+        </style>
+
+        <ul>
+            <li class="italic underline">list item</li>
+            <li class="italic">list item</li>
+            </li>list item</li>
+        </ul>
+
+        <h1>아이디 선택자</h1>
+        하나의 id만 사용할수있고, 다른 엘리먼트가 같은 id를 가질수 없음, class랑 함께 사용시 id만 적용됨, class와 반대개념
+        <style>
+            #underline{
+                text-decoration: underline;
+            }
+            #italic{
+                font-style: italic;
+            }
+        </style>
+
+        <ul>
+            <li id="underline">list item</li>
+            <li id="italic">list item</li>
+            </li>list item</li>
+        </ul>
+
+
+        <h1>자식 선택자</h1>
+        <style>
+            /*parent childeren*/
+            main ul{
+                border: 1px solid;
+            }
+        </style>
+
+        <nav>
+            <h1>menu</h1>
+            <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>contents</h1>
+            <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+            </ul>
+        </main> -->
+
+        <!-- <h1>pseudo class</h1>
+        <p>
+            엘리먼트의 특별한 상태를 나타낸다
+        </p>
+
+        <style>
+            /*selector:pseudo-class(가상의 class)*/
+            li:hover{
+                text-decoration: underline;
+            }
+        </style>
+        <ul>
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+        </ul>
+            </pre> -->
+
+
+
+
+
+
+
+
+
+    <!-- <h1>css 단위(길이)</h1>
+        <style>
+            body{
+                font-size: 14px;
+            }
+            .px{
+                font-size: 16px;
+            }
+            .rem{
+                font-size: 1rem;
+            }
+            .em{
+                font-size: 1em;
+            }
+            .pecent{
+                font-size: 100%
+            }
+            .vw{
+                font-size: 10vw;
+            }
+            .vh{
+                font-size: 10dvh
+            }
+        </style>
+
+        <h3>px (pixel)</h3>
+        <p>절대값</p>
+        <p class="px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>
+        <h3>rem (root element)</h3>
+        <p>루트 엘리먼트에 상대적이다. 1rem = root element의 폰트사이즈</p>
+        <p class="rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>
+        <h3>em (element)</h3>
+        <p>부모 엘리먼트에 상대적이다. 1em = 부모 엘리먼트의 폰트사이즈</p>
+        <p class="em">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>
+        <h3>percent</h3>
+        <p>부모 엘리먼트에 상대적이다. 100% = 부모 엘리먼트의 폰트사이즈</p>
+        <p class="percent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>
+        <h3>vw (viweport width)</h3>
+        <p>뷰포트 넓이에 상대적이다. 100vw = viweport width의 폰트사이즈</p>
+        <p class="vw">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>
+        <h3>vh (viweport height)</h3>
+        <p>뷰포트 높이에 상대적이다. 100vh = viweport height 폰트사이즈</p>
+        <p class="vh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo nobis atque dolorem aspernatur. Ullam, dignissimos consequatur, porro et veniam tempore voluptate eaque commodi nemo neque beatae sint velit autem.</p>  -->
+
+
+
+    <!-- <h1>색상 표기방법</h1>
+        <style>
+            .name{
+                /*색상 이름*/
+                color: red;
+            }
+            .rgb{
+                /*rgb(red green blue*/
+                /*0 - 255*/
+                color: rgb(255 0 0)
+            }
+            .rgba{
+                /*rgba(red green blue / opactiy
+                opacity:0(완전투명) -1(완전 불투명)*/
+                color: rgba(255 0 0 / 0.5)
+            }
+            .hex{
+                /*hexadecimal(16진수) 표기
+                0 - 9, a - f
+                #rrggbb*/
+                color: #ff0000;
+            }
+            .hex-3{
+                /*rrggbb의 값이 겹치는건 하나로 통일 가능*/
+                color: #f00;
+            }
+        </style>
+
+<ul>
+    <li class="name">list item</li>
+    <li class="rgb">list item</li>
+    <li class="rgba">list item</li>
+    <li class="hex">list item</li>
+    <li class="hex-3">list item</li>
+</ul> -->
+
+
+
+
+
+</body>
+
+</html>

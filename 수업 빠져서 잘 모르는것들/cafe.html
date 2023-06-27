@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <!-- scroll-smooth 스크롤 자연스럽게 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the cafe</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 카페 홈페이지에 어울리는 폰트 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body {
+            font-family: "Inconsolata", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-neutral-200">
+    <nav class="sticky top-0 p-2 w-full z-10 bg-black">
+        <ul class="flex">
+            <li class="w-1/4"><!-- 25% -->
+                <a href="#" class="block p-2 text-center text-white hover:bg-white hover:text-black">HOME</a>
+            </li>
+            <li class="w-1/4">
+                <a href="#about" class="block p-2 text-center text-white hover:bg-white hover:text-black">ABOUT</a>
+                <!-- 일치하는 아이디를 페이지 내에서 찾아서 보여줌 (a href=#sbout) -->
+            </li>
+            <li class="w-1/4">
+                <a href="#menu" class="block p-2 text-center text-white hover:bg-white hover:text-black">MENU</a>
+            </li>
+            <li class="w-1/4">
+                <a href="#where" class="block p-2 text-center text-white hover:bg-white hover:text-black">WHERE</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- mian image -->
+    <div
+        class="h-[500px] bg-[url('https://www.w3schools.com/w3images/coffeehouse.jpg')] bg-cover bg-center grayscale-[50%]">
+        <!-- grayscale ←←필터 -->
+        <div class="h-[450px] flex flex-col justify-center">
+            <h1 class="text-8xl text-center text-white">the<br>
+                <span class="inline-block mt-8">Cafe</span>
+            </h1>
+        </div>
+        <div class="mt-4 px-4 flex justify-between">
+            <span class="bg-black text-sm text-white px-2 invisible md:visible">Open from 6am to 5pm</span>
+            <span class="text-sm text-white">15 Adr street, 5015</span>
+        </div>
+    </div>
+
+    <main class="max-w-2xl mx-auto px-4">
+        <div id="about" class="py-16">
+            <h1 class="text-2xl text-center tracking-widest">
+                <!-- tracking-widest -> 글자간격 -->
+                <span class="bg-black text-white px-2">ABOUT THE CAFE</span>
+            </h1>
+        </div>
+        <p class="text-lg my-4">
+            The Cafe was founded in blabla by Mr.
+            Smith in lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minm veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p class="text-lg my-4">
+            In addition to our full espresso and brew bar menu,
+            we serve fresh made-to-order breakfast and lunch sandwiches,
+            as well as a selection of sides and salads and other good stuff.
+        </p>
+        <div class="mt-8 px-4 py-2 bg-gray-200 border-l-8 border-l-gray-300">
+            <!-- border-l-8 -> 8px -->
+            <p class="my-4 text-lg italic">
+                "Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new
+                sweet.
+            </p>
+            <p class="my-4 text-lg">
+                Chef, Coffeeist, and Owner: Liam Brown
+            </p>
+        </div>
+        <img class="mt-8 grayscale-[80%]" src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="">
+        <p class="my-4 text-lg">
+            <span class="font-semibold">Opening hours:</span>everyday from 6am to 5pm.
+        </p>
+        <p class="my-4 text-lg">
+            <span class="font-semibold">Address:</span>15 Adr street, 5015 NY
+        </p>
+        <!-- MENU -->
+        <div id="menu" class="py-16">
+            <h1 class="text-2xl text-center tracking-widest">
+                <span class="bg-black text-white px-2">THE MENU</span>
+            </h1>
+        </div>
+
+        <div class="border bg-white shadow-lg flex flex-wrap px-4 py-2">
+            <input type="radio" class="hidden peer/eat" name="menu" id="eat" checked>
+            <label for="eat"
+                class="w-1/2 text-lg text-center font-semibold cursor-pointer peer-checked/eat:bg-neutral-400 peer-checked/eat:text-white">EAT</label>
+            <!-- input아래에 label두기 순서 중요 -->
+            <input type="radio" class="hidden peer/drink" name="menu" id="drink">
+            <label for="drink"
+                class="w-1/2 text-lg text-center font-semibold cursor-pointer peer-checked/drink:bg-neutral-400 peer-checked/drink:text-white">DRINK</label>
+                <!-- MENU:EAT -->
+                <div class="py-4 w-full hidden peer-checked/eat:block">
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Bread Basket</h3>
+                        <p class="my-4 text-lg text-gray-500">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Honey Almond Granola with Fruits</h3>
+                        <p class="my-4 text-lg text-gray-500">Natural cereal of honey toasted oats, raisins, almonds, and dates
+                            7.00</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Belgian Waffle</h3>
+                        <p class="my-4 text-lg text-gray-500">Vanilla flavored batter with malted flour 7.50</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Scrambled eggs</h3>
+                        <p class="my-4 text-lg text-gray-500">Classic scrambled eggs 7.50</p>
+                    </div>
+                </div>
+        
+                <!-- MENU:DRINK -->
+                <div class="py-4 w-full hidden peer-checked/drink:block">
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Coffee</h3>
+                        <p class="my-4 text-lg text-gray-500">Regular coffee 2.50</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Chocolato</h3>
+                        <p class="my-4 text-lg text-gray-500">Chocolate espresso with milk 4.50</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Iced tea</h3>
+                        <p class="my-4 text-lg text-gray-500">Refreshing iced tea 3.00</p>
+                    </div>
+                    <div class="py-4">
+                        <h3 class="my-4 text-xl font-semibold">Soda</h3>
+                        <p class="my-4 text-lg text-gray-500">Coke, Sprite, Fanta, etc. 2.50</p>
+                    </div>
+                </div>
+        </div>
+
+
+        <img src="https://www.w3schools.com/w3images/map.jpg" class="mt-4 grayscale-[80%]" alt="">
+        <p class="my-4 text-lg">
+            <span class="bg-black text-white px-2 py-1">FYI!</span>
+            We offer full-service catering for any event, large or small.
+            We understand your needs and we will cater the food to
+            satisy the biggerst criteria of them all, both look and taste.
+        </p>
+
+        <form action="">
+            <p class="my-4 text-lg">
+                Reserve a table, ask for today's special or just send us a message:
+            </p>
+            <div class="mb-4">
+                <label for="">
+                    <input type="text" class="border text-lg px-2 py-2 w-full" placeholder="Name">
+                </label>
+            </div>
+            <div class="mb-4">
+                <label for="">
+                    <input type="number" class="border text-lg px-2 py-2 w-full" placeholder="How many people">
+                </label>
+            </div>
+            <div class="mb-4">
+                <label for="">
+                    <input type="date" class="border text-lg px-2 py-2 w-full" placeholder="2023-01-16">
+                </label>
+            </div>
+            <div class="mb-4">
+                <label for="">
+                    <input type="text" class="border text-lg px-2 py-2 w-full" placeholder="Message / Special requirements">
+                </label>
+            </div>
+
+            <button class="bg-black text-lg text-white px-4 py-2 hover:bg-gray-400 hover:text-black">SEND MESSAGE</button>
+        </form>
+    </main>
+    <!-- footer -->
+    <footer class="mt-16 bg-gray-200 py-16">
+        <p class="text-center text-lg">
+            Powered by <a href="#" class="underline">Name</a>
+        </p>
+    </footer>
+</body>
+
+</html>

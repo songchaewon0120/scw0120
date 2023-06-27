@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full bg-gray-400 lg:hidden z-10">
+        <!-- lg:hidden lg이상부터는 header를 hidden해라 -->
+        <div class="flex items-center p-2">
+            <button id="openBtn" class="text-2xl text-white px-4 py-2 hover:bg-gray-200 hover:text-black">
+                &#9776;
+            </button>
+            <h1 class="ml-2 text-2xl text-white font-semibold">
+                Compant Name
+            </h1>
+        </div>
+    </header>
+
+    <!-- SIDE BAR -->
+    <nav id="sideBar" class="fixed top-0 left-0 w-80 h-full bg-gray-400 px-4 hidden lg:block z-30">
+        <!-- z-30 -> header 보다 더 위에 있어야함 -->
+        <div class="mt-12 h-48 px-4 flex flex-col justify-center">
+            <h2 class="text-2xl text-white font-semibold">
+                Company <br> Name
+            </h2>
+        </div>
+        <ul>
+            <li class="">
+                <a href="#"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Home</a>
+            </li>
+            <li class="">
+                <a href="#Showcase"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Showcase</a>
+            </li>
+            <li class="">
+                <a href="#Services"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Services</a>
+            </li>
+            <li class="">
+                <a href="#Designers"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Designers</a>
+            </li>
+            <li class="">
+                <a href="#Packages"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Packages</a>
+            </li>
+            <li class="">
+                <a href="#Contact"
+                    class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div id="overLay" class="fixed inset-0 bg-black/80 x-20 hidden"></div>
+    <!-- inset-0 -> top, left, right, bottom 모두 0으로 맞춤 -->
+    <!-- bg-black/80 -> rgb 투명도 -->
+    <main class="mt-24 max-w-screen-lg mx-auto px-4 lg:ml-80">
+        <!-- SHOWCASE -->
+        <div id="showcase">
+            <h2 class="text-gray-400 text-5xl font-semibold my-8">Showcase.</h2>
+            <hr class="w-16 border-t-8 border-t-gray-400 rounded">
+            <!-- hr -> 수평선 -->
+        </div>
+        <!-- MODAL IMAGE -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- <div class=""> -->
+            <img src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <img src="https://www.w3schools.com/w3images/livingroom.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <img src="https://www.w3schools.com/w3images/diningroom.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <img src="https://www.w3schools.com/w3images/atrium.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <img src="https://www.w3schools.com/w3images/bedroom.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <img src="https://www.w3schools.com/w3images/livingroom2.jpg" alt="" onclick="openModal(this)"
+                class="cursor-pointer opacity-80 hover:opacity-100">
+            <!-- </div> -->
+        </div>
+        <!-- MODAL IMAGE -->
+        <div id="modal" class="fixed inset-0 bg-black/80 z-40 hidden">
+            <!-- z-40 z-index 값이 가장 높아야함 -->
+            <img src="https://www.w3schools.com/w3images/livingroom2.jpg" id="modalImage"
+                class="max-w-2xl mt-24 mx-auto" alt="">
+        </div>
+
+        <!-- SERVICES -->
+        <div id="services" class="mt-24">
+            <h2 class="text-gray-400 text-5xl my-8 font-semibold">Services.</h2>
+            <hr class="w-16 border-t-8 border-t-gray-400 rounded">
+        </div>
+
+        <p class="my-4">
+            We are a interior design service that focus on what's best for your home and what's vest for you!
+        </p>
+
+        <p class="my-4">
+            Some text about our services - what we do and what we offer.
+            We are lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem nisi, praesentium
+            architecto rerum, facilis neque aliquam, voluptatibus recusandae officiis soluta excepturi minima. Quis
+            earum alias nisi tempore explicabo voluptatibus.
+        </p>
+        <p class="my-4">
+            Our designers are thoughrfully chosen:
+        </p>
+
+        <!-- CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-gray-100">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="" class="w-full">
+                <div class="px-4">
+                    <h3 class="text-2xl my-4 font-semibold tracking-wide">John Doe</h3>
+                    <p class="my-4 text-gray-400">CEO & Founder</p>
+                    <p class="my-4">
+                        phasellus eget enim eu lectus faucibus vestibulm. Suspendisse sodales pellentesque elementum.
+                        phasellus eget enim eu lectus faucibus vestibulm. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100">
+                <img class="w-full" src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                <div class="px-4">
+                    <h3 class="text-2xl my-4 font-semibold tracking-wide">John Doe</h3>
+                    <p class="my-4 text-gray-400">Designer</p>
+                    <p class="my-4">
+                        phasellus eget enim eu lectus faucibus vestibulm. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100">
+                <img class="w-full" src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                <div class="px-4">
+                    <h3 class="text-2xl my-4 font-semibold tracking-wide">Mike Ross</h3>
+                    <p class="my-4 text-gray-400">Architect</p>
+                    <p class="my-4">
+                        phasellus eget enim eu lectus faucibus vestibulm. Suspendisse sodales pellentesque
+                        elementum.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PACKAGES -->
+        <div id="packages" class="mt-24">
+            <h2 class="text-gray-400 text-5xl my-8 font-semibold">Packages</h2>
+            <hr class="w-16 border-t-8 dorder-t-gray-400 ruounded">
+        </div>
+
+        <p class="my-4">
+            Some text our prices.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel at fugiat labore soluta
+            nihil vero ea, omnis
+            animi odio dolor quo tempora libero tempore modi. Eum est modi laudantium cum.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <ul class="bg-gray-100">
+                <li class="bg-gray-600 p-8">
+                    <h3 class="text-2xl text-white text-center">Basic</h3>
+                </li>
+                <li class="text=content p-4 border-b">Floorplanning</li>
+                <li class="text=content p-4 border-b">10 hour support</li>
+                <li class="text=content p-4 border-b">Photohraphy</li>
+                <li class="text=content p-4 border-b">20% furniture discount</li>
+                <li class="text=content p-4 border-b">Good deals</li>
+                <li class="p-4 border-b">
+                    <span class="block text-center text-3xl my-4">$ 199</span>
+                    <span class="block text-center text-gray-400">per room</span>
+                </li>
+                <li class="p-4 text-center">
+                    <button class="px-4 py-2 bg-white hover:bg-gray-600 hover:text-white">Sign Up</button>
+                </li>
+            </ul>
+
+            <ul class="bg-gray-100">
+                <li class="bg-red-600 p-8">
+                    <h3 class="text-2xl text-white text-center">Pro</h3>
+                </li>
+                <li class="text-center p-4 border-b">Floorplanning</li>
+                <li class="text-center p-4 border-b">10 hour support</li>
+                <li class="text-center p-4 border-b">Photohraphy</li>
+                <li class="text-center p-4 border-b">50% furniture discount</li>
+                <li class="text-center p-4 border-b">Good deals</li>
+                <li class="p-4 border-b">
+                    <span class="block text-center text-3xl my-4">$ 249</span>
+                    <span class="block text-center text-gray-400">per room</span>
+                </li>
+                <li class="p-4 text-center">
+                    <button class="px-4 py-2 bg-red-600 hover:bg-gray-600 hover:text-white">Sign Up</button>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- CONTACT -->
+        <div id="contact" class="mt-24">
+            <h2 class="text-gray-400 text-5xl my-8 font-semibold">Contact.</h2>
+            <hr class="w-16 border-t-8 border-t-gray-400 ruounded">
+        </div>
+
+        <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum quos molestiae.
+            Dolorum iste suscipit similique aliquid esse quam cumque harum praesentium facere corporis! Quas culpa
+            quidem officia earum rem.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <img class="w-full h-80 object-cover" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+            <form action="#">
+                <div class="mb-4">
+                    <label for="" class="font-semibold">Name</label>
+                    <input type="text" class="border p-2 w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="" class="font-semibold">Email</label>
+                    <input type="email" class="border p-2 w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="" class="font-semibold">Massage</label>
+                    <input type="text" class="border p-2 w-full">
+                </div>
+                <button class="bg-gray-600 text-white p-2 hover:bg-gray-800">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-24 p-12 bg-gray-200">
+        <p class="text-right">
+            Powered by <a href="#" class="underline">ME</a>
+        </p>
+    </footer>
+
+<!-- SCRIPT -->
+<script>
+    //NAV BAR
+    openBtn.addEventListener('click', () => {
+        sideBar.classList.remove('hidden');
+        overLay.classList.remove('hidden');
+    })
+
+    overLay.addEventListener('click', () => {
+        sideBar.classList.add('hidden');
+        overLay.classList.add('hidden');
+    })
+
+    //MODAL
+    function openModal(el){
+        modalImage.src = el.src;
+        modal.classList.remove('hidden');
+    }
+
+    modal.addEventListener('click', () =>{
+        modal.classList.add('hidden');
+    })
+</script>
+</body>
+</html>

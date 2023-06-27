@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box-1 {
+            width: 100%;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .box-2 {
+            border-radius: 50%;
+            width: 10em;
+            height: 10em;
+            background-color: bisque;
+            margin: auto;
+            transform: translateY(-100px);
+            background-image: url(tordkfqka.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 90;
+        }
+
+        .box-3 {
+            width: 80%;
+            height: 300px;
+            background-color: blueviolet;
+            box-sizing: border-box;
+            transform: translateY(-100px);
+            margin: auto;
+            border-radius: 20px;
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box-1"> </div>
+    <div class="box-3">
+        <div class="box-2">
+        </div>
+        프로필 설명하기
+    </div> -->
+
+    <p>넘치는 콘텐츠 처리 방법을 결정한다</p>
+    <style>
+        .container{
+            border:1px solid;
+            height:50px;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        .overflow-auto{
+            overflow: auto;
+        }
+        .overflow-visible{
+            overflow: visible;
+        }
+    </style>
+    <h3>overflow: hidden</h3>
+    <pre>넘치는 콘텐츠를 숨긴다</pre>
+    <div class="container overflow-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus soluta, expedita, maxime quaerat minus eveniet aperiam assumenda veritatis, ex suscipit! Tempore doloremque saepe provident necessitatibus sapiente placeat perferendis magnam!
+    </div>
+    <h3>overflow: auto</h3>
+    <pre>콘텐츠가 넘치면 스크롤바를 생성한다</pre>
+    <div class="container overflow-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus soluta, expedita, maxime quaerat minus eveniet aperiam assumenda veritatis, ex suscipit! Tempore doloremque saepe provident necessitatibus sapiente placeat perferendis magnam!
+    </div>
+    <h3>overflow: visible (default)</h3>
+    <pre>넘치는 콘텐츠를 보이게한다</pre>
+    <div class="container overflow-visible">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus soluta, expedita, maxime quaerat minus eveniet aperiam assumenda veritatis, ex suscipit! Tempore doloremque saepe provident necessitatibus sapiente placeat perferendis magnam!
+    </div>
+</body>
+
+</html>

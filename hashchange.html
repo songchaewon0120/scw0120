@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#posts">Posts</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="root">
+    </div>
+    
+    <script>
+        // hashchange : hash가 바뀌는 이벤트
+        window.addEventListener("hashchange",()=>{
+            // console.log(location.hash);
+            router(location.hash);
+        })
+
+        window.addEventListener("load", ()=>{
+            router(location.hash);
+        })
+
+        //요청 url과 적절한 컴포넌트를 연결시킨다
+        function router(hash){
+            var url = hash.substr(1); // 문자열에서 hash(#)를 제거한다.
+
+            // console.log(url);
+            
+            // 라우트 리스트
+            var routes = [
+                {path:"home", element:Home},
+                {path:"posts", element:Posts},
+                {path:"post/2",element:Post},
+                {path:"contact", element:Contact},
+            ]
+
+            for(var i=0; i<routes.length; i++){
+                if(routes[i].path === url){
+                    document
+                    .getElementById("root")
+                    .innerHTML = routes[i].element();
+                }
+            }
+        }
+
+        // 홈
+        function Home(){
+            return(`
+                <h1>Home</h1>
+                <p>Welcome to my blog.</p>
+            `)
+        }
+        // 게시물 목록
+        function Posts(){
+            return(`
+                <h1>Posts</h1>
+                <ul>
+                    <li>
+                        <a href="#post/2">Second Post</a>
+                    </li>
+                    <li>
+                        First post
+                    </li>
+                </ul>
+            `)
+        }
+        // 게시물 보기
+        function Post(){
+            // AJAX
+            var DATA = {
+                id:2,
+                contents:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates distinctio consectetur earum, itaque in quasi autem sapiente volupt`,
+                createdAt:'19 April, 2023'
+            }
+
+            return (`
+            <h1>Second post</h1>
+            <small>
+                posted <i>${DATA.createdAt}</i>
+                </small>
+                <p>${DATA.contents}</p>
+                `)
+        }
+        // 컨택
+        function Contact(){
+            return(`
+                <h1>Contact</h1>
+                <p>john@example.com</p>
+                `)
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

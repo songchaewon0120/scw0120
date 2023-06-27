@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+.container{
+    height: 4px;
+    width: 200px;
+    background-color: #888;
+}
+.item{
+    height: inherit;
+    background-color: #000;
+    animation-name:fill;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes fill{
+    from{
+        width: 20%;
+    }
+    to{
+        width: 100%;
+    }
+}
+</style>
+<div class="container">
+    <div class="item"></div>
+</div>
+</body>
+</html>

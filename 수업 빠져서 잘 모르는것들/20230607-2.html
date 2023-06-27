@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          background-color: #ddd;
+        }
+        #container {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1rem;
+          max-width: 640px;
+          margin: auto;
+        }
+        textarea { 
+          height: 12rem;
+          padding: 1rem;
+          border: none;
+          box-shadow: 0 0 5px #888;
+          outline: none;
+          resize: none;
+        }
+        
+        #add-btn {
+          /* position */
+          position: fixed;
+          right: 1rem;
+          bottom: 1rem;
+          /* size */
+          width: 4rem;
+          height: 4rem;
+          /* display */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* style */
+          background-color: #aaa;
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          font-size: 4rem;
+        }
+        #add-btn:hover {
+          background-color: #888;
+        }
+      </style>
+      <h1>Sticky Notes</h1>
+      <div id="container"></div>
+      <button id="add-btn">+</button>
+      <script>
+        var container = document.getElementById("container");
+        var addBtn = document.getElementById("add-btn");
+        // 새로운 노트 추가
+        addBtn.addEventListener("click", addNote);
+        // 페이지 로드 이벤트
+        window.addEventListener("DOMContentLoaded", getNotes);
+        // 노트 생성
+        function addNote() {
+          var notes = getDocs();
+          var newNote = { id: "n" + Date.now(), content: "" };
+          notes.push(newNote); // 임시 저장소에 노트를 추가한다
+          // 로컬 스토리지를 동기화한다
+          saveDoc(notes);
+          createNoteElement(newNote.id, newNote.content);
+        }
+        // 노트를 가져오는 함수
+        function getNotes() {
+          var notes = getDocs();
+          // 노트 엘리먼트를 생성한다
+          for (var i=0; i<notes.length; i++) {
+            createNoteElement(notes[i].id, notes[i].content);
+          }
+        }
+        // 노트 편집
+        function editNote(id, content) {
+          var notes = getDocs();
+          for (var i=0; i<notes.length; i++) {
+            if (notes[i].id === id) {
+              notes[i].content = content;
+            }
+          }
+          // 로컬스토리지 동기화
+          saveDoc(notes);
+        }
+        // 노트 삭제
+        function deleteNote(id, noteElement) {
+          var notes = getDocs();
+          for (var i=0; i<notes.length; i++) {
+            if (notes[i].id === id) {
+              notes.splice(i, 1); // 배열의 아이템 삭제
+            }
+          }
+          saveDoc(notes);
+          // 뷰 업데이트 (노트 엘리먼트 제거)
+          // container의 자식을 제거한다
+          container.removeChild(noteElement);
+        }
+        // 노트 엘리먼트 생성
+        function createNoteElement(id, content) {
+          var noteElement = document.createElement("textarea");
+          noteElement.value = content;
+          // 엘리먼트를 생성하고 이벤트리스너를 연결한다
+          noteElement.addEventListener('change', (e) => editNote(id, e.target.value));
+          noteElement.addEventListener('dblclick', (e) => deleteNote(id, e.target));
+          // container의 첫번째 엘리먼트로 추가한다
+          container.prepend(noteElement);
+        };
+        // 로컬 스토리지에서 노트 데이터를 가져오는 함수
+        function getDocs() {
+          // 로컬스토리지에 노트 저장소가 없으면 빈 저장소를 생성한다
+          if (!localStorage.getItem("notes")) {
+            localStorage.setItem("notes", "[]");
+          }
+          // 객체로 변환을 한 다음 리턴한다
+          return JSON.parse(localStorage.getItem("notes"));
+        };
+        // 로컬 스토리지에 노트 데이터를 저장하는 함수
+        function saveDoc(notes) {
+          localStorage.setItem("notes", JSON.stringify(notes));
+        }
+      </script>
+</body>
+</html>

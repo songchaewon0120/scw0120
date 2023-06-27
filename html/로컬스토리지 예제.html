@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #div {
+            width: 100%;
+            display: flex;
+            padding: 2rem;
+            justify-content: space-around;
+        }
+        button {
+            background-color: black;
+            color: #fff;
+            width: 300px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        #div.hidden {
+            display: none;
+        }
+    </style>
+
+    <h1>Block promotion</h1>
+    <div id="div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="cancel">&#10007;</p>
+    </div>
+    <button id="btn">Do not show anymore</button>
+
+    <script>
+        var div = document.getElementById("div");
+        var btn = document.getElementById("btn");
+        var cancel = document.getElementById("cancel");
+
+        if(localStorage.getItem("btnBlock")){
+            div.classList.add("hidden");
+        }
+
+        cancel.addEventListener("click", function() {
+            div.classList.add("hidden");
+        });
+
+        btn.addEventListener("click",function(){
+            div.classList.add("hidden");
+            
+            //로컬스트리지
+            localStorage.setItem("btnBlock", new Date().toLocaleDateString());
+            //get은 가지고 있다면 set은 만들어준다?
+        })
+        </script>
+</body>
+</html>

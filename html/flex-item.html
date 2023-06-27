@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1>flex shrink</h1>
+  <p>아이템의 크기 감소</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+    
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+      width: 200px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .shrink {
+      /* 기본값 */
+      flex-shrink: 1;
+    }
+
+    .shrink-0 {
+      background-color: #0bf;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <div class="container flex">
+    <div class="item shrink">item</div>
+    <div class="item shrink-0">unshrinkable item</div>
+    <div class="item shrink">item</div>
+  </div> -->
+    
+
+
+  <!-- <h1>flex grow</h1>
+  <p>
+    아이템의 크기 증가
+  </p>
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+    
+    .grow-0 {
+      /* 기본값 */
+      flex-grow: 0;
+    }
+
+    .grow {
+      background-color: #0bf;
+      /* 컨테이너의 빈공간을 다 채울때까지 크기가 증가한다 */
+      flex-grow: 1;
+    }
+  </style>
+
+  <div class="container flex">
+    <div class="item grow-0">item</div>
+    <div class="item grow">grow item</div>
+    <div class="item grow-0">item</div>
+  </div> -->
+
+  <h1>flex basis</h1>
+  <p>아이템의 크기</p>
+  <pre>
+    row: 아이템의 넓이
+    col: 아이템의 높이
+  </pre>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+      flex-basis: 50px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+  </style>
+
+  <h3>flex direction: row</h3>
+
+  <div class="container flex flex-row">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>flex direction: column</h3>
+
+  <div class="container flex flex-col">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <!-- <h1>flex order</h1>
+  <p>
+    아이템의 순서
+  </p>
+
+  <style> 
+    .container {
+      border: 1px solid;
+    }
+    
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .order-none {
+      /* 기본값 */
+      order: 0;
+    }
+
+    .order-1 {
+      order: 1
+    }
+
+    .order-2 {
+      order: 2
+    }
+
+    .order-3 {
+      order: 3
+    }
+  </style>
+
+
+  <div class="container flex">
+    <div class="item order-">item 1</div>
+    <div class="item orde-3">item 2</div>
+    <div class="item ordernone">item 3</div>
+    <div class="item orde-1">item 4</div>
+  </div> -->
+
+</body>
+</html>

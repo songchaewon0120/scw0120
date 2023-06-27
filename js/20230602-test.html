@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        #main{
+
+        }
+        #container{
+            display: inline-flex;
+            width:300px;
+            height:300px;
+            
+        }
+        .image{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+        #left-btn{
+            background-color: transparent;
+            border:none;
+            color:#000;
+            font-size: 5rem;
+        }
+        #right-btn{
+            background-color: transparent;
+            border:none;
+            color:#000;
+            font-size: 5rem;
+        }
+    </style>
+
+    <div id="main">
+        <div id="container">
+            <img class="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MjlfMTU4%2FMDAxNjYxNzM0OTQ0MjIz.ZgE2OBlt_byp0r39sTIL41tun2WvLGc30ss28nK9o_cg.ZTpGKI9iRHwQznYMFG48Op2oYIB9Fh7xeKKFz4sScswg.JPEG.ssong7736%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5_%25288%2529.jpg&type=sc960_832" alt="">
+            <img class="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTlfMTU1%2FMDAxNjUwMzY3MTk1Njcz.vidXdgC-RlKA8CZ6er2YDxLEixyArINCbcUyvjejMXYg.pkLI-HW2M_E6701UJyrJFxgwDQqGU-Pi6z2qNKMLagwg.JPEG.jisu9610042%2Fresized_resized_IMG_0570.jpg&type=sc960_832" alt="">
+            <img class="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMjFfMTE4%2FMDAxNjY5MDQwNzgzMDcw.aqcG5XsS5MJg5sSS08Wr1w_dtDK3MbEZNfsJYSiZCY0g.r3CArtSEaxDCXQdLPbGvzYqK-WkevWATj4dBrVPql8wg.JPEG.lamiyeahh%2FIMG_5753.JPG&type=sc960_832" alt="">
+            <img class="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MTBfMzAg%2FMDAxNjU3NDYzOTE1MjUz.Y4jyvbRRYwEqW7rO-Anzgy27dH7BI80Ytb8YD9C_eG8g.MytFI7eViPs7rI_Oufc1YbM4fqBZOWVgGhZm9zk8I40g.JPEG.wldnjs9575%2FIMG_6608.JPG&type=sc960_832" alt="">
+        </div>
+        <button id="left-btn">&#10094;</button>
+        <button id="right-btn">&#10095;</button>
+    </div>
+
+    <script>
+        
+        var main = document.getElementById("main");
+        var container = document.getElementById("container");
+        var images = document.getElementsByClassName("image");
+        moveWidth = "500px";
+        thisIndex = 0;
+        previousIndex = 0;
+
+
+
+
+    </script>
+</body>
+</html>
