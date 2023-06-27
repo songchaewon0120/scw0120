@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100%;
+  padding: 1rem;
+  background-color: #eee;
+} 
+
+main {
+  margin-left: 16rem;
+  padding: 1rem;
+}
+
+details {
+  margin-bottom: 0.5rem;
+}
+
+#select-year {
+  display: flex;
+  justify-content: flex-end;
+}
+
+select {
+  padding: 0.5rem;
+}
